@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>FORMULÁRIO CLIENTE</title>
+
+		<style type="text/css">
+			@import url("c_fb_style.css");
+		</style>
+	</head>
+
+	<body>
+		<header>Fabiane Bedim - Arquitetura e Deign</header>
+		<h2 class="main_title">PREENCHA O FORMULÁRIO DO CLIENTE</h2>
+
+		<section>
+			<article class="container">
+				<p class="alert">Ítens marcados com "*" são obrigatórios</p>
+				<form method="POST" action="b_process.php">
+
+					<fieldset>
+						<legend>Dados Gerais</legend><br/>
+						
+						<label for="client_name" class="data_type"> Nome:* </label><br/>
+						<input type="text" name="client_name" class="input" minlenght="3" required/><br/><br/>
+						
+						<label for="birth_date" class="data_type"> Data de Nascimento:* </label><br/>
+						<input type="date" name="birth_date" class="input" required /><br/><br/>
+						
+						<label for="cpf" class="data_type"> CPF:* </label><br/>
+						<input type="cpf" id="cpf" name="cpf" class="input" minlenght="14" maxlength="14" placeholder="somente números" pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}" required /><br/><br/>
+
+						<label for="project_type" class="data_type"> Tipo de Projeto:*</label><br/>
+						<select name="project_type" class="input" required>
+							<option value="">Selecione</option>
+							<option value="casa">Casa</option>
+							<option value="apartamento">Apartamento</option>
+							<option value="estabelecimento comercial">Estabelecimento Comercial</option>
+							<option value="outros">Outros</option>
+						</select><br/><br/>
+
+						<label for="contracted_plan" class="data_type"> Plano Contratado:* </label><br/>
+						<select name="contracted_plan" class="input" required>
+							<option value="">Selecione</option>
+							<option value="express">Express</option>
+							<option value="exclusive">Exclusive</option>
+						</select>
+					</fieldset><br/>
+						
+					<fieldset>
+						<legend>Endereço</legend><br/>
+							
+						<label for="adress_type" class="data_type">Tipo:* </label>
+						<select name="adress_type" required>
+							<option value="">Selecione</option>
+							<option value="rua">rua</option>
+							<option value="avenida">avenida</option>
+							<option value="outros">outros</option>
+						</select><br/><br/>
+							
+						<label for="public_place" class="data_type">Logradouro:* </label><br/>
+						<input type="text" name="public_place" class="input" required/><br/><br/>
+						
+						<label for="adress_number" class="data_type">Número:* </label><br/>
+						<input type="number" name="adress_number" class="input" required/><br/><br/>
+
+						<label for="neighborhood" class="data_type">Bairro:* </label><br/>
+						<input type="text" name="neighborhood" class="input" required/><br/><br/>
+						
+						<label for="city" class="data_type">Cidade:* </label><br/>
+						<input type="text" name="city" class="input" required/><br/><br/>
+
+						<label for="state_" class="data_type">Estado:* </label><br/>
+						<input type="text" name="state_" class="input" required/><br/><br/>
+
+						<label for="country" class="data_type">País:* </label><br/>
+						<input type="text" name="country" class="input" required/><br/><br/>
+							
+						<label for="complement" class="data_type">Complemento:</label><br/>
+						<input type="text" name="complement" class="input" placeholder="se houver"/>
+					</fieldset><br/>
+
+					<fieldset>
+						<legend>Contato</legend><br/>
+
+						<label for="email" class="data_type">E-mail:* </label><br/>
+						<input type="email" name="email" class="input" placeholder="qwerty@email.com" required><br/><br/>
+						
+						<label for="cell_phone" class="data_type">Telefone Celular:* </label><br/>
+						<input type="tel" id="cell_phone" name="cell_phone" class="input" maxlength="15" placeholder="(00) 00000-0000" required><br/><br/>
+
+						<label for="secundary_phone" class="data_type">Telefone Secundário</label><br/>
+						<input type="tel" name="secundary_phone" class="input">
+					</fieldset><br/>
+						
+					<fieldset>
+						<legend>Adicionais</legend><br/>
+							
+						<label for="gender" class="data_type">Sexo:* </label><br/>
+
+						<input type="radio" name="gender" value="masculino"/>
+						<label for="gender">Masculino</label><br/>
+							
+						<input type="radio" name="gender" value="feminino"/>
+						<label for="gender">Feminino</label><br/>
+							
+						<input type="radio" name="gender" value="outros"/>
+						<label for="gender">Prefiro não responder</label><br/><br/><br/>
+							
+						<label for="how_found" class="data_type">Como nos conheceu:* </label><br/>
+
+						<input type="radio" name="how_found" value="instagram"/>
+						<label for="how_found">Instagram</label><br/>
+							
+						<input type="radio" name="how_found" value="google"/>
+						<label for="how_found">Google</label><br/>
+							
+						<input type="radio" name="how_found" value="amigos"/>
+						<label for="how_found">Amigos</label><br/>
+							
+						<input type="radio" name="how_found" value="outros"/>
+						<label for="how_found">Outros</label><br/><br/>
+
+						<label for="msg_how_found" class="data_type">(Especifique):</label><br/>
+						<textarea type="text" name="msg_how_found" class="input" placeholder="Máx 600 caracteres"></textarea>
+					</fieldset><br/>
+						
+					<fieldset>
+						<legend>Fale conosco</legend><br/>
+						
+						<label for="msg_type" class="data_type">Tipo de Mensagem:</label><br/>
+							
+						<input type="radio" name="msg_type" value="sugestão"/>
+						<label for="msg_type"> Sugestão</label><br/>
+
+						<input type="radio" name="msg_type" value="crítica"/>
+						<label for="msg_type"> Crítica</label><br/>
+
+						<input type="radio" name="msg_type" value="elogio"/>
+						<label for="msg_type"> Elogio</label><br/>
+
+						<input type="radio" name="msg_type" value="observação"/>
+						<label for="msg_type"> Observação</label><br/><br/>
+							
+						<label for="client_msg" class="data_type">Mensagem:</label><br/>
+						<textarea type="text" name="client_msg" class="input" placeholder="Máx 600 caracteres"></textarea>
+					</fieldset><br/>
+						
+					<fieldset>
+						<legend>Finalizar</legend><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+						<button type="submit">Enviar Formulário</button><br/><br/>
+						<button type="reset">Limpar Formulário</button>
+					</fieldset>
+				</form>
+			</article>
+		</section>
+
+	</body>
+
+	<script>
+		const cpf = document.getElementById('cpf');
+		cpf.addEventListener('keypress', ()=>{
+			let cpf_length = cpf.value.length;
+			if (cpf_length == 3 || cpf_length == 7){
+				cpf.value += '.'
+			} else if (cpf_length == 11){
+				cpf.value += '-'
+			};
+		});
+
+		const cell_phone = document.getElementById('cell_phone');
+		cell_phone.addEventListener('keypress', ()=>{
+			let phone_length = cell_phone.value.length;
+			if (phone_length == 0){
+				cell_phone.value += '('
+			} else if (phone_length == 3){
+				cell_phone.value += ') '
+			} else if (phone_length == 10)
+				cell_phone.value += '-'
+		})
+	</script>
+
+</html>
