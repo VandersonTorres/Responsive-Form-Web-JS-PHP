@@ -9,9 +9,6 @@
 
 body {
 	background-image: linear-gradient(#4231019d, #a87d056c, #332a00);
-	background-position: center;
-    background-repeat: no-repeat;
-	background-size: cover;
 	font-family: 'Times New Roman', Times, serif;
 	margin: 26px ;
     padding: 10px;
